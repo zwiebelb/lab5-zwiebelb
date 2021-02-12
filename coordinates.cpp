@@ -4,7 +4,6 @@
 #include <vector>
 #include <utility>
 #include <cmath>
-#include <iomanip>
 
 #include "coordinates.h"
 
