@@ -14,7 +14,7 @@ TEST(lab5, sig_figs) {
   double distance = Haversine(c1,c2);
   double expected = 3.48;
   double diff = fabs(distance - expected);
-  EXPECT_LE(diff, 0.0001);
+  EXPECT_LE(diff, 0.1);
 }
 TEST(lab5, sigs) {
   Coordinate c1(2,std::make_pair(42.1858587, -122.6970897));
@@ -22,13 +22,30 @@ TEST(lab5, sigs) {
   double distance = Haversine(c1,c2);
   double expected = 4.69;
   double diff = fabs(distance - expected);
-  EXPECT_LE(diff, 0.0001);
+  EXPECT_LE(diff, 0.1);
 }
-TEST(lab5, my_address) {
+TEST(lab5, address) {
   Coordinate c1(2,std::make_pair(42.1858587, -122.6970897));
   Coordinate c2(2,std::make_pair(42.177818,-122.683708));
   double distance = Haversine(c1,c2);
   double expected = 1.42;
   double diff = fabs(distance - expected);
-  EXPECT_LE(diff, 0.0001);
+  EXPECT_LE(diff, 0.1);
+}
+
+TEST(lab5, zeros) {
+  Coordinate c1(2,std::make_pair(0, 0));
+  Coordinate c2(2,std::make_pair(0,0));
+  double distance = Haversine(c1,c2);
+  double expected = 0.0;
+  double diff = fabs(distance - expected);
+  EXPECT_LE(diff, 0.1);
+}
+TEST(lab5, favorite_two_places) {
+  Coordinate c1(2,std::make_pair(-33.8688, 151.2093));
+  Coordinate c2(2,std::make_pair(-37.8136,144.9631));
+  double distance = Haversine(c1,c2);
+  double expected = 713.4;
+  double diff = fabs(distance - expected);
+  EXPECT_LE(diff, 0.1);
 }
