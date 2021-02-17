@@ -3,9 +3,9 @@
 #include <utility>  // For pair
 #include <vector>
 
-typedef std::vector<std::pair<double, double> > Coordinate;
+typedef std::pair<double, double>  Coordinate;
 
 double Haversine(Coordinate a, Coordinate b);
-Coordinate SortByDistanceTo(Coordinate target);
+Coordinate SortByDistanceTo(Coordinate target, std::vector<Coordinate> &coords);
 
 #endif
