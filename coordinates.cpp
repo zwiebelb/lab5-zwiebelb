@@ -10,10 +10,10 @@
 using namespace std;
 
 double Haversine(Coordinate a, Coordinate b){
-    double lat1 = a[0].first; 
-    double lon1 = a[1].second;
-    double lat2 = b[0].first;
-    double lon2 = b[1].second;
+    double lat1 = a.first; 
+    double lon1 = a.second;
+    double lat2 = b.first;
+    double lon2 = b.second;
 
     const double R = 6371e3;
     const double phi1 = lat1 * M_PI/180;
@@ -30,6 +30,6 @@ double Haversine(Coordinate a, Coordinate b){
     return d;}
 
 //target is 42.1858587, -122.6970897
-Coordinate SortByDistanceTo(Coordinate target){
+Coordinate SortByDistanceTo(Coordinate target,vector<Coordinate> &coords){
     Coordinate distance;
     return distance;}
