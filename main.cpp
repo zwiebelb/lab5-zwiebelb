@@ -26,7 +26,7 @@ int main() {
   SortByDistanceTo(target, coords);
 
   cout << "\nThe closest coordinate to the SOU CS building is: " << fixed
-       << setprecision(6) << coords[0].first << ", " << coords[0].second
+       << setprecision(7) << coords[0].first << ", " << coords[0].second
        << endl;
 
   return 0;
