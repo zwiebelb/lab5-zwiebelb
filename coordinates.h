@@ -6,6 +6,6 @@
 typedef std::pair<double, double>  Coordinate;
 
 double Haversine(Coordinate a, Coordinate b);
-Coordinate SortByDistanceTo(Coordinate target, std::vector<Coordinate> &coords);
+void SortByDistanceTo(Coordinate target, std::vector<Coordinate> &coords);
 
 #endif
