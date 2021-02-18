@@ -41,7 +41,7 @@ TEST(lab5, zeros) {
   double diff = fabs(distance - expected);
   EXPECT_LE(diff, 0.1);
 }
-TEST(lab5, favorite_two_places) {
+TEST(lab5, favorite_two_places_with_first_negative) {
   Coordinate c1 = (std::make_pair(-33.8688, 151.2093));
   Coordinate c2 = (std::make_pair(-37.8136,144.9631));
   double distance = Haversine(c1,c2);
