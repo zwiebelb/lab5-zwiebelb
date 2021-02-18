@@ -19,9 +19,6 @@ int main() {
   while (cin >> x >> comma >> coord.first >> comma >> coord.second) {
     coords.push_back(coord);
   }
-  // for(unsigned int i = 0; i < coords.size(); i++){
-  //  cout<< coords[i].first<<coords[i].second<<endl;
-  //}
 
   SortByDistanceTo(target, coords);
 
