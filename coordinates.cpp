@@ -35,7 +35,7 @@ double Haversine(Coordinate a, Coordinate b) {
 // target is 42.1858587, -122.6970897
 void SortByDistanceTo(Coordinate target, vector<Coordinate> &coords) {
   for (unsigned int i = 0; i < coords.size() - 1; ++i) {
-    double lh = numeric_limits<double>::max();
+    double lh = 100000000;  ///numeric_limits<double>::max();
     int min = i;
     for (unsigned int j = i + 1; j < coords.size(); ++j) {
       double h = Haversine(target, coords[j]);
